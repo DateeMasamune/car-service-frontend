@@ -1,0 +1,4 @@
+export const WRITE_SERVICE_STATION = 'WRITE_SERVICE_STATION';
+export const WRITE_CAR = 'WRITE_CAR';
+export const ORDER_DETAIL = 'ORDER_DETAIL';
+export const WRITE_USER = 'WRITE_USER';
