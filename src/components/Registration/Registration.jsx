@@ -37,7 +37,7 @@ function Registration() {
     >
       <Dialog open>
         <DialogTitle>
-          Регистрация аккаутна
+          Регистрация аккаунта
         </DialogTitle>
         <DialogContent>
           <Box sx={paddingBottom}>
