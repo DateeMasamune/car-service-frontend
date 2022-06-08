@@ -18,6 +18,8 @@ function SingleCarPage() {
     handleSendCarMaintenance,
     getSupportedСars,
     handleOrderDetail,
+    user,
+    handlerRemoveCar,
   } = useSingleCarPage();
 
   return (
@@ -26,9 +28,15 @@ function SingleCarPage() {
         <Loading load={load} />
       )}
       <CustomButton name="Назад" onClick={backPage} />
-      <CarTitle currentCar={currentCar} services={services} />
+      <CarTitle
+        currentCar={currentCar}
+        services={services}
+        handlerRemoveCar={handlerRemoveCar}
+        user={user}
+      />
       <Box style={{ marginBottom: 50 }}>
-        <CustomButton name="Отправить автомобиль на техобслуживание" onClick={handleSendCarMaintenance} disabled={sendMaintenance} />
+        {user.role === 'Operator'
+        && <CustomButton name="Отправить автомобиль на техобслуживание" onClick={handleSendCarMaintenance} disabled={sendMaintenance} />}
       </Box>
       <Typography variant="h5" style={{ marginBottom: 50 }}>
         Запчасти которые нужно поменять:

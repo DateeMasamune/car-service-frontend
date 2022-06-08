@@ -12,7 +12,8 @@ function useCarPark() {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const description = useCallback((carId) => (
-    serviceStation.find((service) => service.id === carId)?.name
+    // eslint-disable-next-line no-underscore-dangle
+    serviceStation.find((service) => service._id === carId)?.name
   ), [carParkRedux, serviceStation]);
 
   const handlerAddCar = () => {
