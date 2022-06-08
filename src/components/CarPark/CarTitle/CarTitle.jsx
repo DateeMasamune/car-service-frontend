@@ -9,12 +9,12 @@ function CarTitle({
   return (
     <>
       <Typography variant="h2" component="h2" style={{ marginTop: 50 }}>
-        {currentCar.brand}
+        {currentCar?.brand}
       </Typography>
       <Typography variant="body1" style={{ marginBottom: 50 }}>
-        {`Станция техобслуживания: ${services.name}`}
+        {`Станция техобслуживания: ${services?.name}`}
       </Typography>
-      {user.userId === currentCar.userId
+      {user?.userId === currentCar?.userId
        && <CustomButton name="Отменить обслуживание" onClick={handlerRemoveCar} />}
     </>
   );
