@@ -92,7 +92,7 @@ function ServiceStation() {
       </Dialog>
       {load && <Loading load={load} />}
       {serviceStation.length === 0 && (
-        <Skeleton name="Сервисов еще нет" />
+        <Skeleton text="Сервисов еще нет" />
       )}
     </>
 

@@ -14,7 +14,7 @@ function useRegistration() {
   const navigate = useNavigate();
   // eslint-disable-next-line no-useless-escape
   const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  const regexEnglishCharOnly = /^[a-zA-Z]+$/;
+  const regexEnglishCharOnly = /^[A-Za-z][A-Za-z0-9]*$/;
   const {
     register, watch, handleSubmit, getValues, formState: { errors },
   } = useForm({ mode: 'onChange' });
